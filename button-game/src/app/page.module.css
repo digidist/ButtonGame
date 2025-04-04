@@ -1,0 +1,317 @@
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #e5d9b6;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  max-width: 650px;
+  width: 100%;
+  padding: 25px;
+  background-color: #e5d9b6;
+}
+
+.top-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #e5d9b6;
+  margin-bottom: 15px;
+}
+
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav li {
+  font-size: 12px;
+  color: #0000ff;
+  cursor: pointer;
+  background-color: #e5d9b6;
+  text-decoration: underline;
+}
+
+.site-title {
+  font-size: 36px;
+  color: #0000ff;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.subtitle {
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 25px;
+  max-width: 450px;
+}
+
+.press-button {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 28px;
+  padding: 30px 60px;
+  background: linear-gradient(to bottom, #c0c0c0, #a9a9a9);
+  border: 3px solid #000;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 4px 4px 0px #000;
+  text-shadow: 1px 1px 0px #fff;
+}
+
+.press-button:hover:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 2px 2px 0px #000;
+}
+
+.press-button:disabled {
+  background: #d3d3d3;
+  color: #686868; /* More visible text color */
+  cursor: not-allowed;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.info-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 25px;
+  max-width: 550px;
+}
+
+.info-box {
+  flex: 1;
+  background-color: #d3d3d3;
+  border: 3px solid #000;
+  border-radius: 0px;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Modified for Current Pot and Entry Fee to have same size */
+.info-row .info-box {
+  flex: 1;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Specific styling for Time Remaining to be bigger */
+.info-box:nth-child(3) {
+  font-size: 16px;
+  min-height: 120px;
+}
+
+/* Ensure Last Presser and Last Winner row has consistent height */
+.info-row:last-child .info-box {
+  min-height: 120px;
+  align-items: center;
+}
+
+.info-box .label {
+  font-size: 12px;
+  color: #0000ff;
+  border-bottom: 2px solid #0000ff;
+  padding-bottom: 5px;
+  margin-bottom: 8px;
+}
+
+.info-box div {
+  margin: 6px 0;
+}
+
+.claim-reward-button {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 12px;
+  padding: 10px 20px;
+  background-color: #d3d3d3;
+  border: 2px solid #000;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.claim-reward-button:hover {
+  background-color: #b0b0b0;
+}
+
+.wallet-status {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.timer-message {
+  text-align: center;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #ff4444;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 20px;
+  }
+
+  .main {
+    padding: 10px;
+  }
+
+  .site-title {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .press-button {
+    font-size: 22px;
+    padding: 20px 40px;
+  }
+
+  .info-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .info-row .info-box {
+    min-height: 80px;
+  }
+
+  .info-box {
+    font-size: 12px;
+  }
+
+  .info-box .label {
+    font-size: 10px;
+  }
+
+  .top-nav li {
+    font-size: 10px;
+  }
+
+  .claim-reward-button {
+    font-size: 10px;
+    padding: 8px 16px;
+  }
+
+  .info-box:nth-child(3) {
+    font-size: 14px;
+    min-height: 100px;
+  }
+
+  .info-row:last-child .info-box {
+    min-height: 100px;
+  }
+
+  .info-box .label {
+    padding: 6px;
+  }
+  
+  .info-box .content {
+    padding: 10px;
+  }
+}
+/* components/modals.module.css */
+.modalOverlay {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+
+  font-size: 14px;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.closeButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to bottom, #ffcc00, #ff9900);
+  color: black;
+  border: 2px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 14px;
+  text-shadow: 1px 1px 0px #fff;
+  box-shadow: 2px 2px 0px #000;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.closeButton:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px #000;
+  background: linear-gradient(to bottom, #ff9900, #ffcc00);
+}
+
+.closeButton:hover {
+  background: #0056b3;
+}
+.faqTitle {
+
+  color: #0056b3;
+}
+.faqAnswer {
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+}
+
+.aboutText {
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+}
+.aboutTitle {
+  color: #0056b3;
+}
+
+.percentageExplanation {
+  color: blue;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}

@@ -4,9 +4,9 @@ import 'isomorphic-fetch';
 import { FetchDataOutput } from '@erc725/erc725.js/build/main/src/types/decodeData.js';
 
 // Static variables
-const RPC_ENDPOINT = 'https://rpc.testnet.lukso.network';
+const RPC_ENDPOINT = 'https://rpc.mainnet.lukso.network';
 const IPFS_GATEWAY = 'https://api.universalprofile.cloud/ipfs';
-const SAMPLE_PROFILE_ADDRESS = '0x9139def55c73c12bcda9c44f12326686e3948634';
+const SAMPLE_PROFILE_ADDRESS = '0x2cf7840ffd6C89F54016Cb3AB7b6a90cfAedF2E7';
 
 // 💡 Note: You can debug any smart contract by using the ERC725 Tools
 // 👉 https://erc725-inspect.lukso.tech/inspector?address=0x9139def55c73c12bcda9c44f12326686e3948634&network=testnet
@@ -68,8 +68,8 @@ async function fetchProfileMetadata(address: string) {
     name = profileData.value.LSP3Profile.name;
     description = profileData.value.LSP3Profile.description;
     links = profileData.value.LSP3Profile.links;
-    firstLinkTitle = links[0].title;
-    firstLinkURL = links[0].url;
+    firstLinkTitle = links?.[0]?.title;
+    firstLinkURL = links?.[0]?.url;
     tags = profileData.value.LSP3Profile.tags;
     firstTag = tags[0];
 

@@ -1,0 +1,15 @@
+[build]
+  # Command to build your Next.js app
+  command = "yarn build"
+  # Directory where the built files are output
+  # For Next.js, Netlify auto-detects this, so you can omit it unless using `next export`
+  # publish = ".next" # Uncomment only if needed; Netlify usually handles this
+
+# Optional: Configure serverless functions (e.g., for API routes or SSR)
+[functions]
+  # Directory for serverless functions (Next.js API routes live in `pages/api`)
+  directory = "api"
+
+# Optional: Specify the Next.js runtime explicitly (Netlify often auto-detects this)
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

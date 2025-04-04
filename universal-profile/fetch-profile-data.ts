@@ -4,8 +4,8 @@ import lsp3ProfileSchema from '@erc725/erc725.js/schemas/LSP3ProfileMetadata.jso
 // Initatiate erc725.js
 const erc725js = new ERC725(
   lsp3ProfileSchema,
-  '0xEda145b45f76EDB44F112B0d46654044E7B8F319', // UP Contract Address
-  'https://rpc.testnet.lukso.network',
+  '0x2cf7840ffd6C89F54016Cb3AB7b6a90cfAedF2E7', // UP Contract Address
+  'https://rpc.mainnet.lukso.network',
   {
     ipfsGateway: 'https://api.universalprofile.cloud/ipfs',
   },
