@@ -1,4 +1,4 @@
-//bun hardhat run ./scripts/updateCountdownDuration.ts --network luksoMainnet
+// bun hardhat run ./scripts/updateCountdownDuration.ts --network luksoMainnet
 // scripts/updateCountdownDuration.ts
 const hre = require('hardhat');
 const { ethers } = require('hardhat');
